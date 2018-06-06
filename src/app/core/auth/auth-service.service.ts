@@ -29,6 +29,7 @@ export class AuthService {
         const possibleUsers: User[] = this.userService.gerUsers().filter((user: User) => user.user.includes(username)
             && user.password === encryptPassword);
         if (possibleUsers.length > 0) {
+            this.localStorage.setItem(DEFAULT_LOGIN_NAME, possibleUsers[0].id);
             this.router.navigate(['home']);
         } else {
             this.router.navigate(['login'], { queryParams: { message: 'User not found! Please Try again!' }});
