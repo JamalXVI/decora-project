@@ -42,3 +42,6 @@ mat-card-actions{
     z-index: 10;
     position: relative;
 }
+mat-form-field{
+    width: 100%;
+}

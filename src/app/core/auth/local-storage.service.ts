@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 export class LocalStorage {
     getItem(key: string, defaultValue?: any): any {
-        if (!!localStorage.getItem(key)) {
+        if (!localStorage.getItem(key)) {
             localStorage.setItem(key, defaultValue);
         }
         return JSON.parse(localStorage.getItem(key));

@@ -21,7 +21,8 @@ export class AuthService {
 
     }
     isLoggedIn(): Observable<Boolean> {
-        return of(this.localStorage.getItem(DEFAULT_LOGIN_NAME));
+        const logado = this.localStorage.getItem(DEFAULT_LOGIN_NAME);
+        return of(logado);
     }
     isAdmin(): Observable<Boolean> {
         const id: Number = this.localStorage.getItem(DEFAULT_LOGIN_NAME);
@@ -36,16 +37,16 @@ export class AuthService {
         }
         return of(false);
     }
-    logIn(username: string, password: string): void {
+    logIn(username: string, password: string): boolean {
         const md5 = new Md5();
         const encryptPassword: any = md5.appendStr(password).end();
-        const possibleUsers: User[] = this.userService.gerUsers().filter((user: User) => user.user.includes(username)
+        const possibleUsers: User[] = this.userService.gerUsers().filter((user: User) => user.user === username
             && user.password === encryptPassword);
         if (possibleUsers.length > 0) {
             this.localStorage.setItem(DEFAULT_LOGIN_NAME, possibleUsers[0].id);
-            this.router.navigate(['home']);
+            return true;
         } else {
-            this.router.navigate(['login'], { queryParams: { message: 'User not found! Please Try again!' } });
+            return false;
         }
     }
 
