@@ -714,7 +714,7 @@ export class UserService {
                 'id': 100,
                 'user': 'admin',
                 'name': 'Administrador',
-                'password': '9c91c0f84df9629f2a0d7087f45789e0',
+                'password': '21232f297a57a5a743894a0e4a801fc3',
                 'role': 1
             })];
     }
