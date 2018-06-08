@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -20,7 +20,25 @@ export class LoginComponent implements OnInit {
   private matcher = new CustomErrorStateMatcher();
   constructor(private authService: AuthService,
     private router: Router,
-    private snackBar: MatSnackBar) { }
+    private activedRoute: ActivatedRoute,
+    private snackBar: MatSnackBar) {
+    this.activedRoute.queryParams.subscribe(params => {
+      const mensagem = params['mensagem'];
+      if (mensagem) {
+        switch (mensagem) {
+          case 'deslogado':
+            const snackBarRef = this.snackBar.open('Então é assim? Então vai! *cries*', 'Pedir Desculpas', { duration: 2500 });
+            snackBarRef.onAction().subscribe(act => this.snackBar.open('Desculpado, mas não quero me magoar novamente, ta?', '',
+              { duration: 2000 }));
+            break;
+
+          default:
+            this.snackBar.open('Aha! Parece que alguém estava tentando acessar sem estar logado, né?', '', { duration: 2500 });
+            break;
+        }
+      }
+    });
+  }
 
   ngOnInit() {
     this.siginForm = new FormGroup({
@@ -40,7 +58,7 @@ export class LoginComponent implements OnInit {
         this.openSnackBar('Quem procura acha né homi?');
         this.router.navigate(['/home']);
       } else {
-        this.openSnackBar('Oxi encontrei foi não! Tem certeza que está certo ai?');
+        this.openSnackBar('Oxi, encontrei foi não! Tem certeza que está certo ai?');
       }
     }
   }

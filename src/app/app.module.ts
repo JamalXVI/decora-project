@@ -11,6 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +19,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { AppComponent } from './app.component';
     HomeComponent,
     AddUserComponent,
     PageNotFoundComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

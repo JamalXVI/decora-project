@@ -37,6 +37,16 @@ export class AuthService {
         }
         return of(false);
     }
+    getUserName(): String {
+        const id: Number = this.localStorage.getItem(DEFAULT_LOGIN_NAME);
+        if (id) {
+            const users: User[] = this.userService.gerUsers().filter(usr => usr.id === id);
+            if (users && users.length > 0) {
+                return users[0].user;
+            }
+        }
+        return 'Não Encontrado!';
+    }
     logIn(username: string, password: string): boolean {
         const md5 = new Md5();
         const encryptPassword: any = md5.appendStr(password).end();
