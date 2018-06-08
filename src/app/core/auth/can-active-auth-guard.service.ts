@@ -22,7 +22,6 @@ export class CanActiveAuthGuard implements CanActivate, CanActivateChild, CanLoa
     }
     private authenticade(): Observable<boolean> {
         return this.authService.isLoggedIn().pipe(take(1), map(authState => !!authState), tap(authState => {
-            console.log('estado');
             if (!authState) {
                 this.router.navigate(['/login'], { queryParams: { mensagem: 'login-invalido' } });
             }
