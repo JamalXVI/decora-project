@@ -705,9 +705,9 @@ export class UserService {
             }),
             new User({
                 'id': 99,
-                'user': 'gbaudon2q',
+                'user': 'user',
                 'name': 'Gretal Baudon',
-                'password': 'e6aa858e7bd1a24dcd7e5b9181d09776',
+                'password': '21232f297a57a5a743894a0e4a801fc3',
                 'role': 0
             }),
             new User({
