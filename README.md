@@ -9,7 +9,9 @@ Project Language: Portuguese
 
 *No Back-end Required*
 
-You can also test in: https://project-decora.s3-website.us-east-2.amazonaws.com
+You can also test in: 
+- http://d3h3nwubv1o1ll.cloudfront.net/
+- http://project-decora-new.s3-website-sa-east-1.amazonaws.com/
 
 To log-in into the project just use these users:
 
@@ -22,8 +24,8 @@ Custom Libraries:
 - Angular Material
 
 The images are Creative Communs (CC0) License and can be found at:
-pixabay.com
-iconfinder.com
+- pixabay.com
+- iconfinder.com
 
 ## Development server
 
