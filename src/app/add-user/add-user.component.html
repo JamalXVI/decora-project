@@ -1,3 +1,20 @@
-<p>
-  add-user works!
-</p>
+<app-toolbar></app-toolbar>
+<div class="main">
+  <div class="before-form">
+    <span class="parent" (click)='returnList()'>Usuários</span>
+    <span>></span>
+    <span>Adicionar</span>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="sendForm()">
+      <div class="main">
+        <mat-card>
+          <mat-card-content>
+          </mat-card-content>
+  
+          <mat-card-actions>
+            <button mat-raised-button type="submit" [disabled]="form.invalid">ADICIONAR</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </form>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-add-user',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-
-  constructor() { }
+  form: FormGroup;
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.form = new FormGroup({});
   }
-
+  returnList() {
+    this.router.navigate(['/home']);
+  }
 }

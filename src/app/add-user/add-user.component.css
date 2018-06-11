@@ -1,0 +1,15 @@
+.main{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+.before-form span{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.parent{
+    color: #9E9E9E;
+    cursor: pointer;
+}

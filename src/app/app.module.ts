@@ -20,6 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { TabelaComponent } from './tabela/tabela.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     AddUserComponent,
     PageNotFoundComponent,
     ToolbarComponent,
+    TabelaComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,10 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     HttpModule,
     MatSnackBarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
