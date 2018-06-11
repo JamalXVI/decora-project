@@ -9,7 +9,7 @@ Project Language: Portuguese
 
 *No Back-end Required*
 
-You can also test in: http://project-decora.s3-website.us-east-2.amazonaws.com
+You can also test in: https://project-decora.s3-website.us-east-2.amazonaws.com
 
 To log-in into the project just use these users:
 
