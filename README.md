@@ -1,6 +1,29 @@
-# ProjectoDecora
+# Project Decora
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+
+# Project Notes
+This project is made for fun, anyone can use it as GPU (General Public License)
+
+Project Language: Portuguese
+
+*No Back-end Required*
+
+You can also test in: http://project-decora.s3-website.us-east-2.amazonaws.com
+
+To log-in into the project just use these users:
+
+user: admin, password: admin, role: Administrator
+
+user: user, password: user, role: User
+
+Custom Libraries:
+- lodash
+- Angular Material
+
+The images are Creative Communs (CC0) License and can be found at:
+pixabay.com
+iconfinder.com
 
 ## Development server
 
